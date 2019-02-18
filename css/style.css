@@ -471,6 +471,246 @@ main{
 	left:10px;
 }
 
+/* 商品区section */
+section{
+	width:100%;
+	height:520px;
+	margin-top:30px;
+}
+section>img{
+	float:left;
+	margin-right: 30px;
+}
+section  .rs{
+	height:360px;
+	float:right;
+	border:none;
+}
+section>div{
+	width:900px;
+	height:50px;
+	background: #fFF; 
+	border-bottom:1px dashed #ccc;
+}
+section>div a{
+	display:inline-block;
+	width:80px;
+	height:50px;
+	color:#000;
+    font-size: 13px;
+	text-align: center; 
+	margin-right: 30px;
+}
+section .con1{
+	width:900px;
+	height:400px;
+	text-align: center;
+	border:none;
+}
+section .con1 span{
+	display: block;
+	width:130px;
+	line-height: 30px;
+	height:30px;
+	border-radius: 20px;
+	color:#fff;
+	background: #C5BDCC;
+	margin:35px auto;
+}
+section .con1 p{
+	width:200px;
+	height:400px;
+	float: left;
+    margin-left:16px;
+} 
+section .con2{
+	width:900px;
+	height:400px;
+	display:none;
+	text-align: center;
+	border:none;
+	position: absolute;
+	top:658px;
+}
+section .con2 span{
+	display: block;
+	width:130px;
+	line-height: 30px;
+	height:30px;
+	border-radius: 20px;
+	color:#fff;
+	background: #ed4044;
+	margin:35px auto;
+}
+section .con2 p{
+	width:200px;
+	height:400px;
+	float: left;
+    margin-left:16px;
+	
+} 
+section .con3{
+	width:900px;
+	height:400px;
+	text-align: center;
+	border:none;
+	display:none;
+	position: absolute;
+	top:658px;
+}
+section .con3 span{
+	display: block;
+	width:130px;
+	line-height: 30px;
+	height:30px;
+	border-radius: 20px;
+	color:#fff;
+	background: #4ace83;
+	margin:35px auto;
+}
+section .con3 p{
+	width:200px;
+	height:400px;
+	float: left;
+	border:none;
+    margin-left:16px;
+} 
+/* 猫猫主粮 */
+.catblock{
+	padding-left: 20px;
+	height: 581px;
+	/* background: pink; */
+}
+.food-tit{
+	width:100%;
+	height: 31px;
+	line-height: 31px;
+	font-size: 20px;
+	color;#333333;
+}
+.block_left{
+	width:328px;
+	height:477px;
+	background: url(../img/njs.gif) no-repeat;
+	float: left;
+}
+.block_left ._left{
+	position: absolute;
+	left: 20px;
+	top:1500px;
+	width:313px;
+	height:130px;
+	padding-left: 15px;
+	/* background: red; */
+}
+.block_left ._left li{
+	float: left;
+	width: 88px;
+	height: 25px;
+	line-height: 25px;
+	border-radius: 13px;
+	margin-right: 16px;
+	margin-bottom: 10px;
+	background: white;
+	color: #444444;
+	font-size: 12px;
+	text-align: center;
+}
+/* 热门 */
+.hot{
+	float: left;
+	width:900px;
+	height: 477px;
+}
+.hot .tit{
+	width:378px;
+	height: 31px;
+	line-height: 29px;
+	position: absolute;
+	top:1118px;
+	left:870px;
+	/* background: red; */
+	border: 1px solid #ccc;
+	border-bottom:none;
+}
+.hot .tit a{
+	display: inline-block;
+	padding:10px 15.9px;
+	/* background:red; */
+	height: 0px;
+	line-height: 0px;
+	border-right: 1px solid #ccc;
+}
+.hot .tit a:first-child{
+	border-top:5px solid #e74085;
+	border-right:1px solid #e74085;
+	border-i900left:1px solid #e74085;
+}
+.hot li{
+	float: left;
+	border-right: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7;
+	background-size:contain;
+}
+.hot .l1{
+	width:388px;
+	height:299px;
+	border-top: 1px solid #e74085;
+	background: url(../img/hot1.gif) no-repeat;
+}
+.hot .l2{
+	width:458px;
+	height:149px;
+	border-top: 1px solid #e74085;
+	background: url(../img/hot2.gif) no-repeat;
+}
+.hot .l3{
+	width:458px;
+	height:149px;
+	background: url(../img/hot3.gif) no-repeat;
+}
+.hot .l4{
+	width:289px;
+	height:176px;
+	background: url(../img/hot4.gif) no-repeat;
+}
+.hot .l5{
+	width:289px;
+	height:176px;
+	background: url(../img/hot5.gif) no-repeat;
+}
+.hot .l6{
+	width:268px;
+	height:176px;
+	background: url(../img/hot6.gif) no-repeat;
+}
+.import {
+	width:897px;
+	height: 477px;
+	position: absolute;
+	left:348px;
+	top:1150px;
+	border-top:1px solid #e74085;
+	background:white;
+	display: none;
+}
+.import li{
+	text-align: center;
+	float: left;
+	width:298px;
+	height: 237px;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #e7e7e7;
+}
+.bt li{
+	width: 150px;
+	height: 71px;
+	text-align: center;
+	float: left;
+	border-right:none;
+	border:1px solid #e7e7e7;
+	opacity: 1;
+}
 
 footer{
 	width:100%;
@@ -538,10 +778,9 @@ footer .fm{
 	margin-top: 12px;
 }
 .flink{
-
 	 color:#999999;
 	 font-size: 12px;
-	 padding-right: 500px;
+	 padding-right: 275px;
 	 height: 54px;
 	 line-height: 30px;
 	 text-align: left;

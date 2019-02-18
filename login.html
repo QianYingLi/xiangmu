@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			html,body{
+				width:100%;
+				height:100%;
+			}
+			*{
+				margin:0;
+				padding:0;
+			}
+			li{
+				list-style:none;
+			}
+			nav{
+				width:100%;
+				height:60px;
+				line-height: 60px;
+				background: #edeef2;
+				padding-left: 20px;
+			}
+			nav img{
+				margin:10px auto;
+				float: left;
+			}
+			nav a{
+				display: inline-block;
+				height: 0; 
+				line-height: 10px;
+				padding:14px;
+				text-decoration: none;
+				border-right:1px solid #ccc;
+				color:#717172;
+				font-size: 14px;
+				font-weight: bold;
+			}
+			nav a:last-child{
+				border: none;
+			}
+			nav .a1{
+				margin-left: 600px;
+			}
+			main{
+				width:100%;
+				height:500px;
+				background: url(img/big1.gif) no-repeat;
+				background-size: cover;
+				position: relative;
+				color:#000;
+			}
+			main .tab{
+				width:350px;
+				height:320px;
+				position: absolute;
+				top:39px;
+				left:800px;
+				background:#fff;
+				padding-top: 65px;
+				padding-left: 30px;
+				border:2px solid #C0C0C0;
+			}
+			main .tab .ip{
+				width:250px;
+				height: 30px;
+				border-top-color: #e1e1e1;
+				border-color: #e1e1e1;
+			}
+			.tab button{
+				width:280px;
+				height:40px;
+				position: absolute;
+				top:240px;
+				left:50px;
+				background:#ff8601;
+				color:#fff;
+				font-size: 18px;
+				border:none;
+			}
+			.tab span{
+				/* background: red; */
+			}
+			.tab p{
+				font-size: 14px;
+				color:#898989;
+			}
+			.tab img{
+				margin-top:130px;
+				margin-left:-15px;
+			}
+			footer{
+				width:100%;
+				color:#c5c5c6;
+				font-size:12px;
+				text-align: center;
+			}
+			footer ul{
+				width:400px;
+				height:30px;
+				margin:0 auto;
+				padding-top:140px;
+			}
+			footer ul li{
+				float:left;
+				padding-left:10px;
+				padding-right: 10px;
+				border-right:1px solid #ccc;
+			}
+			footer ul li:last-child{
+				border-right:none;
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<img src="img/11.gif">
+				<a class="a1" href="#">E宠商城</a>
+				<a href="#">活动</a>
+				<a href="#">品牌</a>
+		</nav>
+		<main>
+			<div class="tab">
+				<span>用户名:</span>  <input class="ip1" type="text"><span id="s1"></span><br><br>
+				<span>密&nbsp &nbsp码:&nbsp</span><input class="ip2" type="text"><span id="s2"></span><br><br>
+				<p>
+					<input type="checkbox"/>自动登录&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp忘记密码？
+				</p>
+				<button id="oBtn">登录</button>
+				<img src="img/log1.gif">
+			</div>
+		</main>
+		<footer>
+			<ul>
+					<li>E宠商场</li>
+					<li>淘宠</li>
+					<li>知识</li>
+					<li>游戏</li>
+					<li>关于我们</li>
+					<li>联系我们</li>
+			</ul>
+			<div>渝ICP备13005525号  &copy; 2007-2013 gutou.com </div>
+		</footer>
+	</body>
+</html>
+<script src="js/jquery-1.11.1.js"></script>
+<script>
+		//页面加载出来就要取出cookie
+		window.onload=function(){   //取出cookie 
+			var str=document.cookie;   
+			var arr=str.replace(/\s+/g,"").split(";");  
+			//遍历arr,然后取出相对应的属性值
+			for(var i=0;i<arr.length;i++){
+				var brr=arr[i].split("=");
+				if(brr[0]=="uname"){
+					var username=brr[1];    //取出用户名
+					console.log(username);
+				}
+				if(brr[0]=="upwd"){
+					var userpwd=brr[1];     //取出密码
+					console.log(userpwd);
+				} 
+			}	
+			//给用户名和密码添加失焦事件
+			var flagName=null;
+			var flagPwd=null;
+			$(".ip1").blur(function(){  //用户名
+				if($(".ip1").val()!=username){
+					flagName=false;
+					$("#s1").html("用户名输入错误");
+					$("#s1").css("color","red");
+				}
+				else{
+					flagName=true;
+					$("#s1").html(" ");
+				}
+			})
+			$(".ip2").blur(function(){  //用户名
+				if($(".ip2").val()!=userpwd){
+					flagPwd=false;
+					$("#s2").html("密码错误");
+					$("#s2").css("color","red");
+				}
+				else{
+					flagPwd=true;
+					$("#s2").html(" ");
+				}
+			})
+			//登录事件
+			$("#oBtn").click(function(){
+				if(flagName&&flagPwd){
+					location.href="index.html";
+				}
+			}) 
+		}	
+</script>
